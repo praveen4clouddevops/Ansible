@@ -13,7 +13,7 @@
     - name: Starting user
       ansible.builtin.debug:
        msg: strating user
-        - name: This is a cart task
+    - name: This is a cart task
       ansible.builtin.debug:
        msg: Installing cart
     - name: Starting cart

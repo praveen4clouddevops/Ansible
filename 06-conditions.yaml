@@ -1,11 +1,26 @@
- - name: Demo using conditions
-   hosts: all
-   tasks:
-    - name: run this task only when the distribution is centos
+- name: Demo on using conditions
+  hosts: all
+  vars:
+    action: true
+    bar: xyz 
+  tasks:
+    - name: Run this task only when the distribution is CentOS
       ansible.builtin.debug:
-       msg: i am a centos machine
-      when: ansible_distribution == "CentOS"
-    - name: run this task only when the distribution is Debian
+        msg: I am a CentOS Machine
+      when: ansible_distribution == "CentOS" 
+        
+    - name: Run this task only when the distribution is Debian
       ansible.builtin.debug:
-       msg: i am a Debian machine
+        msg: I am a Debian Machine 
       when: ansible_distribution == "Debian"
+
+    - name: Run this action 
+      ansible.builtin.debug:
+        msg: I am learning Ansible and I will only print when action is true  
+      when: action
+
+    - name: I will run only when the value bar is not declared
+      ansible.builtin.debug: 
+        msg: "BAR IS NOT DELCARED"
+      when: bar is undefined
+      

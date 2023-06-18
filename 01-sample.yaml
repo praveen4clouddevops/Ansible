@@ -1,0 +1,6 @@
+-name:Play1
+ Hosts:all
+ tasks:
+  -name:-Printinh Hello from paly1
+   ansible.builtin.debug:
+    msg: Hello from play1 of task1

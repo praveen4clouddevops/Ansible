@@ -17,5 +17,9 @@
      ansible.builtin.debug:
       msg: value of the CarName is {{ CarName }}
 
+   - name: Demo to show quotes
+     ansible.builtin.debug:
+      msg: {{ CarName }}
+
 
 

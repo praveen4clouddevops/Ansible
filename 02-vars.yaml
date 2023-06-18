@@ -6,3 +6,7 @@
    - name: Printing the variable name
      ansible.builtin.debug:
       msg: value of the URL is {{ URL }}
+
+   - name: Printing the variable name which is not declared
+     ansible.builtin.debug:
+      msg: value of the CarName is {{ CarName }}
